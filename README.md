@@ -1,4 +1,3 @@
-======
 README
 ======
 
@@ -11,19 +10,19 @@ This application receives the github webhook event and dumps it into the mongodb
 
 If you don't have rabbitmq & mongodb installed in your local, you can use the **docker** to bring it up.
 
-    $ docker-compose -d up
+        $ docker-compose -d up
 
 
 !!! Steps
 
-1) Build and start the application
+1) Build and start the application:
 
-    $ ./mvnw clean spring-boot:run
+        $ ./mvnw clean spring-boot:run
 
 
 2) Start the ngrok
 
-    $ ngrok http 9090
+        $ ngrok http 9090
 
 
 Note: ngrok is used to forward the internet traffic to the localhost. For more information, refer: https://ngrok.com/
@@ -31,12 +30,10 @@ Note: ngrok is used to forward the internet traffic to the localhost. For more i
 
 3) Register the webhook with github using the ngrox url (ex: http://ab090ce1.ngrok.io)
 
-
 4) Test the github webhook by pushing some commits into the repository.
 
 5) Check the mongodb **events** collection for the webhook events.
 
-
-    $ mongo
-    $ db.event.find()
+        $ mongo
+        $ db.event.find()
 
