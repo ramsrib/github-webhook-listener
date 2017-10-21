@@ -6,14 +6,14 @@ This is a simple webhook listener (micro-service) developed using Spring Boot 2 
 This application receives the github webhook event and dumps it into the mongodb and then publishes that event into the message queue (rabbitmq).
 
 
-!!! RabbitMQ & MongoDB
+#### RabbitMQ & MongoDB
 
 If you don't have rabbitmq & mongodb installed in your local, you can use the **docker** to bring it up.
 
         $ docker-compose -d up
 
 
-!!! Steps
+### Steps
 
 1) Build and start the application:
 
@@ -26,7 +26,6 @@ If you don't have rabbitmq & mongodb installed in your local, you can use the **
 
 
 Note: ngrok is used to forward the internet traffic to the localhost. For more information, refer: https://ngrok.com/
-
 
 3) Register the webhook with github using the ngrox url (ex: http://ab090ce1.ngrok.io)
 
